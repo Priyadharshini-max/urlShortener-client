@@ -1,0 +1,80 @@
+.main {
+  border: 2px solid rgba(0, 0, 0, 0.479);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.342);
+}
+.inputbox {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.685);
+  margin: 10px;
+  width: 250px;
+  font-size: medium;
+  border-radius: 5px;
+}
+.heading {
+  font-size: 25px;
+  padding-left: 80px;
+}
+
+.submitDiv {
+  padding-left: 70px !important;
+  width: 50px;
+}
+
+.submitbutton {
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 35px !important;
+  border-radius: 5px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.637);
+}
+body {
+  background-image: linear-gradient(
+    to right,
+    rgba(168, 50, 107, 0.836),
+    rgba(0, 0, 0, 0.514)
+  );
+  color: rgba(250, 235, 215, 0.808);
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.781);
+  font-weight: 600;
+}
+
+.resetForm {
+  margin: 10px;
+}
+
+.passwordtitle {
+  padding: 5px;
+  font-weight: 300;
+}
+
+.ResetBtn {
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 75px !important;
+  border-radius: 5px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.637);
+}
+.passwordBtn {
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 100px !important;
+  border-radius: 5px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.637);
+}
+
+.newpassword {
+  padding: 5px;
+}

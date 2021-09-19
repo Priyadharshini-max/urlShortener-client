@@ -1,0 +1,138 @@
+.main {
+  border: 2px solid rgba(0, 0, 0, 0.479);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.inputfield {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.685);
+  margin: 10px;
+  width: 300px;
+  font-size: medium;
+  border-radius: 5px;
+}
+h3 {
+  font-size: 25px;
+  padding-left: 125px;
+}
+
+.submitdiv {
+  padding-left: 50px !important;
+  width: 50px;
+}
+
+.submitbtn {
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 70px !important;
+  border-radius: 5px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.637);
+}
+.passwordlink {
+  margin: 20px 0 20px 30px;
+  padding-left: 53px !important;
+  font-size: 15px;
+}
+.registerlink {
+  margin-top: 10px;
+}
+.dashboardHeading {
+  padding: 0;
+}
+.dashboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -95%);
+  color: rgba(0, 0, 0, 0.637);
+  display: inline-block;
+}
+
+.urlcount {
+  font-size: x-large;
+}
+
+.createurlDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -95%);
+  color: rgba(0, 0, 0, 0.637);
+}
+
+.urlTextbox {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.685);
+  width: 300px;
+  font-size: medium;
+  border-radius: 5px;
+}
+
+.urlBtn {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.637);
+}
+
+.createurlDiv {
+  border: 1px solid rgba(0, 0, 0, 0.479);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 10px;
+}
+.urlHeading {
+  padding: 10px;
+}
+table,
+td,
+th {
+  border: 1px solid black;
+  text-align: left;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  padding: 15px;
+}
+@media screen and (max-width: 803px) {
+  .registerlink {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1133px) {
+  .urlcount {
+    font-size: medium;
+  }
+  /* .dashboardBtn {
+    margin-left: 100px !important;
+  } */
+}
+
+@media screen and (max-width: 760px) {
+  .urlcount {
+    font-size: small;
+  }
+  /* .dashboardBtn {
+    margin-left: 50px !important;
+  } */
+}
+/* @media screen and (max-width: 425px) {
+  .dashboardBtn {
+    margin-left: 0px !important;
+  }
+} */
