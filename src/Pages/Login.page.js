@@ -15,9 +15,7 @@ export default class Login extends Component {
             password: ""
         }
     }
-    componentDidMount = () => {
-        console.log(this.props)
-    }
+
     handleChange = ({ target: { name, value } }) => {
         this.setState({ [name]: value });
     }
@@ -46,18 +44,21 @@ export default class Login extends Component {
 
     render() {
         return (
+
             <div className="main">
+                <div><h4>URL Shortener App</h4></div>
                 <div><h3>Login</h3></div>
                 <form>
                     <div className="loginform">
                         <div className="textbox"><input type="email" name="email" value={this.state.email} placeholder="Email" onChange={this.handleChange} className="inputfield" /></div>
                         <div className="textbox"><input type="password" name="password" value={this.state.password} placeholder="Password" onChange={this.handleChange} className="inputfield" /></div>
-                        <div className="registerlink">Are you new to this app? <span><Link to="/register">Register here</Link></span> </div>
+                        <div><span className="registerline">Are you new to this app? </span><span className="registerlink"><Link to="/register">Register here</Link></span> </div>
                         <div className="passwordlink"><Link to="/forgotpassword" className="passwordLink">Forgot Password?</Link> </div>
                         <div className="submitdiv"><input type="submit" value="Submit" onClick={this.handleSubmit} className="submitbtn" /></div>
                     </div>
                 </form>
             </div>
+
         )
     }
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import Table from 'react-bootstrap/Table';
 
@@ -17,20 +17,12 @@ export default function Dashboard() {
         } else {
             getURL();
         }
-
     }, []);
-
 
     const getURL = async () => {
         try {
             var { data } = await axios.get("http://localhost:3001/url");
-            console.log(data);
             setState({ ...state, urlCount: data });
-            console.log("StateData", state.urlCount);
-            data.map((item, index) => {
-                console.log(item._id.date, item.totalUrl);
-            });
-
         }
 
         catch (err) {
@@ -42,14 +34,8 @@ export default function Dashboard() {
     return (
 
         <div className="dashboard">
-            <div className="dashboardBtns">
-                <div><Link to="/createurl"><button className="dashboardBtn">Create Short URL</button></Link>
-                    <span><Link to="/displayurl"><button className="dashboardBtn">Display all short URL</button></Link></span>
-                </div>
-
-            </div>
-            <div><h3 className="dashboardHeading">Total number of url created per day </h3></div>
-            <table>
+            <div><p className="dashboardHeading">Total number of url created per day </p></div>
+            <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -69,7 +55,7 @@ export default function Dashboard() {
                     }
 
                 </tbody>
-            </table>
+            </Table>
         </div>
     )
 }

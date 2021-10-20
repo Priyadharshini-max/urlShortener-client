@@ -1,19 +1,14 @@
 import axios from "axios";
-import { toast } from 'react-toastify';
 import { useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
-var randomstring = require("randomstring");
 
 const API_URL = "http://localhost:3001/url";
 
 export default function CreateUrl() {
     const [state, setState] = useState({
         longurl: "",
-        shorturl: "",
-        count: 0,
-        date: "",
         mailid: "",
-
+        shorturl: ""
     })
     const history = useHistory();
     useEffect(() => {
@@ -27,7 +22,6 @@ export default function CreateUrl() {
     const handleChange = ({ target: { name, value } }) => {
         setState({ ...state, [name]: value, mailid: localStorage.getItem("user") });
     }
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         var UrlValidation = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
@@ -37,15 +31,14 @@ export default function CreateUrl() {
             } else if (!UrlValidation.test(state.longurl)) {
                 alert("Enter valid URL");
             } else {
-                const mail = localStorage.getItem("user");
-                setState({ ...state, shorturl: `https://shorturl.com/url/${randomstring.generate(5)}`, date: new Date().toISOString().slice(0, 10), mailid: mail });
                 console.log(state);
-
-                const { mailid, date, longurl, shorturl, count } = state;
+                const { mailid, longurl } = state;
                 const { data } = await axios.post(API_URL, {
-                    mailid, date, longurl, shorturl, count
+                    mailid, longurl
                 })
-                console.log(data.message);
+                console.log(data);
+                setState({ ...state, shorturl: data.shorturl });
+                console.log("state : ", state);
             }
         } catch (err) {
             console.log(err)

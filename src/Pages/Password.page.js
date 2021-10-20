@@ -1,4 +1,4 @@
-import { Container, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from 'react-toastify';
@@ -37,7 +37,7 @@ export default function Password() {
         <div className="main">
             <form>
                 <div className="resetForm">
-                    <div><h3 className="passwordtitle">Enter your mail id</h3></div>
+                    <div><h3 className="passwordtitle"><strong>Enter your mail id</strong></h3></div>
                     <div className="Formfield"><input type="email" name="email" value={state.email} placeholder="Email" onChange={handleChange} className="inputbox" /></div>
                     <div>
                         <Button className="ResetBtn" type="submit" onClick={handleSubmit} >
